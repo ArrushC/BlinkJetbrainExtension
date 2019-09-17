@@ -1,0 +1,4 @@
+<extensions defaultExtensionNs="com.intellij">
+    <fileType name="Blink file" implementationClass="xyz.blink.jetbrainext.BlinkFileType"
+              language="Blink" extensions="blink"/>
+</extensions>

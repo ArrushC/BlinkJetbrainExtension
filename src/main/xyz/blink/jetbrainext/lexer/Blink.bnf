@@ -1,0 +1,19 @@
+{
+    parserClass="xyz.blink.jetbrainext.BlinkParser"
+    extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+    psiClassPrefix="Blink"
+    psiImplClassSuffix="Impl"
+    psiPackage="xyz.blink.jetbrainext.psi"
+    psiImplPackage="xyz.blink.jetbrainext.psi.impl"
+
+    elementTypeHolderClass="xyz.blink.jetbrainext.psi.BlinkTypes"
+    elementTypeClass="xyz.blink.jetbrainext.psi.BlinkElementType"
+    tokenTypeClass="xyz.blink.jetbrainext.psi.BlinkTokenType"
+}
+
+blinkFile ::= item_*
+
+private item_ ::= (property|COMMENT|CRLF)
+
+property ::= (KEY? SEPARATOR VALUE?) | KEY
